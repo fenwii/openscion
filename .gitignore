@@ -1,0 +1,8 @@
+/target/
+**/.openscion/
+*.sqlite-wal
+*.sqlite-shm
+.DS_Store
+
+**/__pycache__/
+*.pyc

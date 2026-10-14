@@ -1,0 +1,53 @@
+[workspace]
+resolver = "2"
+members = [
+ "crates/openscion-types",
+ "crates/openscion-cas",
+ "crates/openscion-tree",
+ "crates/openscion-core",
+ "crates/openscion-cli",
+ "crates/openscion-git",
+ "crates/openscion-registry",
+ "crates/openscion-server",
+ "crates/openscion-workspace",
+ "crates/openscion-agent",
+ "crates/openscion-change",
+ "crates/openscion-policy",
+ "crates/openscion-validation",
+ "crates/openscion-land",
+ "crates/openscion-native",
+ "crates/openscion-derived",
+ "crates/openscion-shadow",
+ "crates/openscion-authority",
+ "crates/openscion-native-ref",
+ "crates/openscion-gateway",
+ "crates/openscion-operations",
+ "crates/openscion-release",
+]
+
+[workspace.package]
+version = "0.6.0"
+edition = "2021"
+license = "Apache-2.0"
+
+[workspace.dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+fs2 = "0.4"
+hex = "0.4"
+rusqlite = { version = "0.32", features = ["bundled"] }
+sha2 = "0.10"
+tempfile = "3"
+thiserror = "1"
+uuid = { version = "1", features = ["v4"] }
+serde_json = "1"
+
+# V0.2 HTTP service, Git backend, and authentication
+axum = { version = "0.7", features = ["macros"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "signal", "sync", "time"] }
+serde = { version = "1", features = ["derive"] }
+base64 = "0.22"
+wait-timeout = "0.2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tower = "0.4"

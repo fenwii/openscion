@@ -1,0 +1,39 @@
+{
+  "project": "OpenScion V0.6",
+  "artifact_status": "Commercial release source candidate; not compiler-verified or production-certified",
+  "release_tag_status": "DO NOT TAG COMMERCIAL GA UNTIL G0-G7 PASS",
+  "checks_passed": [
+    "22 Rust crate manifests parse and local crate wiring validated",
+    "SQLite V3 to V4 to V5 to V6 migration and integrity under Python sqlite3",
+    "SQLite CAS expected generation/ABA contract check",
+    "V0.1-V0.5 structural regression scripts",
+    "TypeScript SDK type check",
+    "Git V0.4 clean/conflict merge/candidate/ref CAS fixture",
+    "Git V0.5 raw object/tree/directory-transition fixture",
+    "Git V0.6 isolated mirror and protected-ref CAS fixture",
+    "Python scripts compile; Bash scripts syntactically valid",
+    "Release evidence explicitly records G0-G7 as incomplete"
+  ],
+  "checks_not_run": [
+    "cargo build --workspace",
+    "cargo test --workspace",
+    "cargo fmt --all -- --check",
+    "cargo clippy --workspace --all-targets",
+    "Rust integrated authority/native CAS/mirror/fallback tests",
+    "live V0.6 HTTP smoke",
+    "Linux and macOS CI",
+    "10,000-commit Git/native differential corpus",
+    "multiworker crash recovery and DR restore exercise",
+    "penetration test, supply-chain signing and SBOM"
+  ],
+  "available_tools": {
+    "python": true,
+    "git": true,
+    "typescript": true,
+    "rustc": false,
+    "cargo": false
+  },
+  "native_authority_scope": "Opt-in preview, verified imported Git Changesets only; no arbitrary native authoring",
+  "cargo_lock": "Not generated; formal release blocker",
+  "commercial_ga_qualified": false
+}

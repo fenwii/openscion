@@ -1,0 +1,20 @@
+[package]
+name = "openscion-gateway"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+[dependencies]
+anyhow.workspace = true
+serde.workspace = true
+rusqlite.workspace = true
+uuid.workspace = true
+wait-timeout.workspace = true
+fs2.workspace = true
+openscion-registry = { path = "../openscion-registry" }
+openscion-authority = { path = "../openscion-authority" }
+openscion-native-ref = { path = "../openscion-native-ref" }
+openscion-shadow = { path = "../openscion-shadow" }
+openscion-git = { path = "../openscion-git" }
+[dev-dependencies]
+tempfile = "3"
+openscion-operations = {path = "../openscion-operations"}

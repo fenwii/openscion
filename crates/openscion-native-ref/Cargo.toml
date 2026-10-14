@@ -1,0 +1,19 @@
+[package]
+name = "openscion-native-ref"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+[dependencies]
+anyhow.workspace = true
+rusqlite.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+hex.workspace = true
+uuid.workspace = true
+openscion-authority = {path = "../openscion-authority"}
+openscion-native = {path = "../openscion-native"}
+openscion-registry = {path = "../openscion-registry"}
+openscion-cas = {path = "../openscion-cas"}
+openscion-derived = {path = "../openscion-derived"}
+openscion-types = {path = "../openscion-types"}

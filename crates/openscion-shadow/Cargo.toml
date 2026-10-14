@@ -1,0 +1,25 @@
+[package]
+name = "openscion-shadow"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+base64.workspace = true
+hex.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+rusqlite.workspace = true
+sha2.workspace = true
+uuid.workspace = true
+openscion-types = { path = "../openscion-types" }
+openscion-cas = { path = "../openscion-cas" }
+openscion-tree = { path = "../openscion-tree" }
+openscion-git = { path = "../openscion-git" }
+openscion-registry = { path = "../openscion-registry" }
+openscion-native = { path = "../openscion-native" }
+openscion-derived = { path = "../openscion-derived" }
+
+[dev-dependencies]
+tempfile = "3"

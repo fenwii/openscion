@@ -1,0 +1,55 @@
+[package]
+autobins = false
+name = "openscion-server"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+axum.workspace = true
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+base64.workspace = true
+clap.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+openscion-git = { path = "../openscion-git" }
+openscion-registry = { path = "../openscion-registry" }
+openscion-workspace = {path = "../openscion-workspace"}
+uuid.workspace = true
+openscion-change = {path = "../openscion-change"}
+openscion-policy = {path = "../openscion-policy"}
+openscion-validation = {path = "../openscion-validation"}
+openscion-land = {path = "../openscion-land"}
+openscion-shadow = {path = "../openscion-shadow"}
+openscion-authority = {path = "../openscion-authority"}
+openscion-native-ref = {path = "../openscion-native-ref"}
+openscion-gateway = {path = "../openscion-gateway"}
+openscion-operations = {path = "../openscion-operations"}
+openscion-release = {path = "../openscion-release"}
+
+[[bin]]
+name = "osc-server"
+path = "src/main.rs"
+
+[[bin]]
+name = "osc-admin"
+path = "src/bin/osc-admin.rs"
+
+[[bin]]
+name = "osc-workspace"
+path = "src/bin/osc-workspace.rs"
+
+[[bin]]
+name = "osc-change"
+path = "src/bin/osc-change.rs"
+
+[[bin]]
+name = "osc-shadow"
+path = "src/bin/osc-shadow.rs"
+
+[[bin]]
+name = "osc-ops"
+path = "src/bin/osc-ops.rs"

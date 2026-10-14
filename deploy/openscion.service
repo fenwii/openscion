@@ -1,0 +1,22 @@
+[Unit]
+Description=OpenScion Git-backed source service (release candidate)
+After=network.target
+
+[Service]
+Type=simple
+User=openscion
+Group=openscion
+ExecStart=/usr/local/bin/osc-server --data /var/lib/openscion --bind 127.0.0.1:8787
+Restart=on-failure
+RestartSec=3s
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/openscion /srv/openscion/repos
+CapabilityBoundingSet=
+SystemCallArchitectures=native
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

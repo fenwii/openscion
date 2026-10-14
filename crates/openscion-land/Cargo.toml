@@ -1,0 +1,25 @@
+[package]
+name = "openscion-land"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+fs2.workspace = true
+rusqlite.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+hex.workspace = true
+uuid.workspace = true
+wait-timeout.workspace = true
+openscion-git = { path = "../openscion-git" }
+openscion-registry = { path = "../openscion-registry" }
+openscion-change = { path = "../openscion-change" }
+openscion-policy = { path = "../openscion-policy" }
+openscion-validation = { path = "../openscion-validation" }
+
+[dev-dependencies]
+tempfile.workspace = true
+openscion-workspace = {path = "../openscion-workspace"}

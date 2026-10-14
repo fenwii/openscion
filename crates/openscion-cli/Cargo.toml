@@ -1,0 +1,22 @@
+[package]
+name = "openscion-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+openscion-types = { path = "../openscion-types" }
+openscion-cas = { path = "../openscion-cas" }
+openscion-tree = { path = "../openscion-tree" }
+openscion-core = { path = "../openscion-core" }
+clap.workspace = true
+anyhow.workspace = true
+serde_json.workspace = true
+hex.workspace = true
+
+[[bin]]
+name = "osc"
+path = "src/main.rs"
+
+[dev-dependencies]
+tempfile = "3"

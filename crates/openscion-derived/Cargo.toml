@@ -1,0 +1,15 @@
+[package]
+name = "openscion-derived"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+openscion-types = { path = "../openscion-types" }
+openscion-cas = { path = "../openscion-cas" }
+openscion-tree = { path = "../openscion-tree" }
+openscion-native = { path = "../openscion-native" }
+
+[dev-dependencies]
+tempfile = "3"

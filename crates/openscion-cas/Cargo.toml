@@ -1,0 +1,13 @@
+[package]
+name = "openscion-cas"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+openscion-types = { path = "../openscion-types" }
+sha2.workspace = true
+hex.workspace = true
+tempfile.workspace = true
+thiserror.workspace = true

@@ -1,0 +1,38 @@
+name: OpenScion V0.6 Candidate CI
+on:
+  push:
+  pull_request:
+jobs:
+  build-test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+      # A lockfile must be generated, reviewed and committed before formal GA.
+      - run: cargo generate-lockfile
+      - run: cargo fmt --all
+      - run: cargo build --workspace
+      - run: cargo test --workspace
+      - run: cargo clippy --workspace --all-targets
+      - run: python3 scripts/check_v02.py
+      - run: python3 scripts/check_v03.py
+      - run: python3 scripts/check_v04.py
+      - run: python3 scripts/check_v05.py
+      - run: python3 scripts/check_v06.py
+      - run: python3 scripts/test_git_contract_v04.py
+      - run: python3 scripts/test_git_contract_v05.py
+      - run: python3 scripts/test_git_contract_v06.py
+      - run: python3 scripts/v02-smoke.py
+      - run: python3 scripts/v03-smoke.py
+      - run: python3 scripts/v04-smoke.py
+      - run: python3 scripts/v05-smoke.py
+      - run: python3 scripts/v06-smoke.py
+      - run: bash scripts/smoke.sh
+      - run: cd sdk/typescript && npm install --no-audit --no-fund && npx tsc --noEmit

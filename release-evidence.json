@@ -1,0 +1,14 @@
+{
+  "release": "0.6.0",
+  "commercial_ga_qualified": false,
+  "gates": [
+    {"id":"G0","description":"Compiled V0.1-V0.5 baseline, Cargo.lock and platform tests","evidence":null,"passed":false},
+    {"id":"G1","description":"Object integrity, native-Git parity and canonical format tests","evidence":null,"passed":false},
+    {"id":"G2","description":"Concurrent Git/native Ref CAS and ABA tests","evidence":null,"passed":false},
+    {"id":"G3","description":"Fault injection, verified restore, fallback and disaster recovery","evidence":null,"passed":false},
+    {"id":"G4","description":"Independent security assessment and OS-level writer fencing","evidence":null,"passed":false},
+    {"id":"G5","description":"Git compatibility matrix, migrations, SHA-1/SHA-256","evidence":null,"passed":false},
+    {"id":"G6","description":"Operational SLO, monitoring and customer support drills","evidence":null,"passed":false},
+    {"id":"G7","description":"Reviewed locked dependencies, SBOM, signed provenance, release approval","evidence":null,"passed":false}
+  ]
+}

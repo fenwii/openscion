@@ -1,0 +1,18 @@
+[package]
+name = "openscion-change"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+rusqlite.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+uuid.workspace = true
+sha2.workspace = true
+hex.workspace = true
+openscion-registry = { path = "../openscion-registry" }
+
+[dev-dependencies]
+tempfile.workspace = true

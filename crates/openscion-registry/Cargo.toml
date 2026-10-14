@@ -1,0 +1,17 @@
+[package]
+name = "openscion-registry"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+rusqlite.workspace = true
+serde.workspace = true
+sha2.workspace = true
+hex.workspace = true
+uuid.workspace = true
+openscion-git = { path = "../openscion-git" }
+
+[dev-dependencies]
+tempfile = "3"

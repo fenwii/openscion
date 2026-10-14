@@ -1,0 +1,18 @@
+[package]
+name = "openscion-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+openscion-types = { path = "../openscion-types" }
+openscion-cas = { path = "../openscion-cas" }
+openscion-tree = { path = "../openscion-tree" }
+rusqlite.workspace = true
+fs2.workspace = true
+uuid.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+tempfile = "3"
