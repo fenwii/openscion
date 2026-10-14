@@ -109,4 +109,4 @@ Use `osc-ops --help` and its subcommand help for authoritative argument syntax. 
 - [Backup and operations](docs/v0.6/OPERATIONS.md)
 - [Commercial G0–G7 release gates](docs/v0.6/RELEASE_GATES.md)
 
-Apache-2.0 license carried forward; third-party and branding review required before commercial distribution.
+MIT license carried forward; third-party and branding review required before commercial distribution.
